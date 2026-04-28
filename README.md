@@ -1,18 +1,118 @@
-# Salesforce DX Project: Next Steps
+# 🛍️ Retail Store Planogram Management System
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+## 📌 Overview
+This project is built using **Salesforce Apex, Triggers, and Lightning Web Components (LWC)** to streamline retail execution for field sales representatives.
 
-## How Do You Plan to Deploy Your Changes?
+It enables:
+- Matching **Retail Stores** with **In-Store Locations**
+- Managing **Planogram Images**
+- Allowing sales reps to upload shelf images
+- Visualizing execution through a **custom LWC dashboard**
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+---
 
-## Configure Your Salesforce DX Project
+## 🚀 Features
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+### 🔗 Retail Store ↔ In-Store Location Mapping
+- Automatically associates retail stores with their respective in-store locations
+- Ensures accurate tracking of product placement
 
-## Read All About It
+### 🖼️ Planogram Image Management
+- Upload and store planogram images against in-store locations
+- Helps define expected shelf layouts
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+### 📷 Sales Rep Image Upload
+- Sales reps can upload real-time shelf images
+- Images are linked to:
+  - Retail Store
+  - In-Store Location
+
+### 📊 LWC Dashboard
+- Interactive dashboard for sales reps
+- Provides:
+  - Image upload functionality
+  - Easy navigation between stores and locations
+
+---
+
+## 🏗️ Architecture
+
+### Backend (Apex)
+- **Apex Classes**
+  - Business logic for mapping, validation, and image handling
+- **Triggers**
+  - Automate record creation and updates
+  - Maintain data consistency between objects
+
+### Frontend (LWC)
+- Dashboard UI
+- Image upload components
+- Data visualization components
+
+---
+
+## 📂 Project Structure
+
+```
+force-app/
+│── main/
+│   ├── default/
+│   │   ├── classes/              # Apex Classes
+│   │   ├── triggers/             # Apex Triggers
+│   │   ├── lwc/                  # Lightning Web Components
+```
+
+---
+
+## ⚙️ Setup Instructions
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   ```
+
+2. Authorize your Salesforce org:
+   ```bash
+   sfdx auth:web:login
+   ```
+
+3. Deploy the project:
+   ```bash
+   sfdx force:source:deploy -p force-app
+   ```
+
+4. Add LWC components to Lightning Pages:
+   - Home Page
+
+---
+
+## 🧑‍💼 Usage Flow
+
+1. Create or select a **Retail Store**
+2. Map **In-Store Locations**
+3. Upload **Planogram Image** (expected layout)
+4. Sales rep visits store and uploads **actual shelf image**
+5. View and manage data via **Dashboard**
+
+---
+
+## 🔐 Permissions
+
+Ensure users have access to:
+- Retail Store object
+- In-Store Location object
+- Files (ContentDocument)
+- Apex Classes & LWC Components
+
+---
+
+## 📸 Future Enhancements
+
+- AI-based image comparison while sending through whatsapp to the agent (Planogram vs Actual)
+- Einstein Vision API for shelf image analysis after image is sent to agent through whatsapp
+- Advanced analytics dashboard
+
+---
+
+## 📄 License
+This project is for agentforce hackathon challenge.
