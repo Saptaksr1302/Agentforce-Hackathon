@@ -1,0 +1,5 @@
+{
+  "title": "Store Location Selection Input (Apex)",
+  "description": "Help to select store location with option for uploading one image",
+  "lightning:type": "@apexClassType/c__StoreLocationAgentAction"
+}

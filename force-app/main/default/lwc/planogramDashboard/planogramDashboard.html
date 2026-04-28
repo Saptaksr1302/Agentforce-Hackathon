@@ -1,0 +1,57 @@
+<template>
+    <lightning-card>
+
+        <!-- Header -->
+        <div class="header">
+            <h1>Mobile-First Rep Dashboard</h1>
+            <p>Select store, choose location, and upload latest planogram</p>
+        </div>
+
+        <!-- Selection Section -->
+        <div class="selection-container">
+
+            <div class="input-box">
+                <lightning-combobox
+                    label="Retail Store"
+                    options={storeOptions}
+                    value={selectedStore}
+                    onchange={handleStoreChange}>
+                </lightning-combobox>
+            </div>
+
+            <div class="input-box">
+                <lightning-combobox
+                    label="In-Store Location"
+                    options={locationOptions}
+                    value={selectedLocation}
+                    onchange={handleLocationChange}
+                    disabled={isLocationDisabled}>
+                </lightning-combobox>
+            </div>
+
+        </div>
+
+        <!-- Upload Section -->
+        <template if:true={selectedLocation}>
+            <div class="upload-container">
+
+                <div class="upload-box">
+                    <lightning-icon icon-name="utility:upload" size="large"></lightning-icon>
+
+                    <p class="upload-text">
+                        Upload Planogram Image
+                    </p>
+
+                    <lightning-file-upload
+                        record-id={selectedLocation}
+                        accept={acceptedFormats}
+                        onuploadfinished={handleUploadFinished}>
+                    </lightning-file-upload>
+
+                </div>
+
+            </div>
+        </template>
+
+    </lightning-card>
+</template>

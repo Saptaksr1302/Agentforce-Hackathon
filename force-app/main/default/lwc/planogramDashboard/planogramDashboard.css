@@ -1,0 +1,52 @@
+.header {
+    padding: 16px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.header p {
+    font-size: 13px;
+    color: #666;
+    margin-top: 4px;
+}
+
+/* Selection Section */
+.selection-container {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+}
+
+.input-box {
+    flex: 1;
+}
+
+/* Upload Section */
+.upload-container {
+    padding: 20px;
+}
+
+.upload-box {
+    border: 2px dashed #d8dde6;
+    border-radius: 10px;
+    text-align: center;
+    padding: 30px;
+    background-color: #fafafa;
+    transition: 0.3s ease;
+}
+
+.upload-box:hover {
+    border-color: #1589ee;
+    background-color: #f4faff;
+}
+
+.upload-text {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #444;
+}

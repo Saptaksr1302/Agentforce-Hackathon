@@ -1,0 +1,27 @@
+<template>
+    <template if:true={showLocationdata}>
+        <template for:each={locationData} for:item="location">
+            <div key={location.Id} class="location-tile">
+                <lightning-card icon-name="" size="medium" title="Store Location Details">
+                    <div>
+                        <h2>
+                            <a href="#" data-location-id={location.Id} onclick={handleClick}>
+                                {location.Name}
+                            </a>
+                        </h2>
+                        <input type="radio" name="radioselect" checked={location.isSelected} value={location.Id} onchange={handleSelect} style="margin-right: 5px;">
+                    </div>
+                    <div>
+                        <div class="details-row">
+                            <span class="detail-label">In-Store Location:</span>
+                            <span class="detail-value">{location.name}</span>
+                        </div>
+                    </div>
+                </lightning-card>
+            </div>
+            </template>
+     </template>  
+     <lightning-input type="text" name="locationName" label="Selected In-Store Location" value={locationName}></lightning-input> 
+     <lightning-input type="text" name="locationId" label="Selected In-Store Location Id" value={locationId}></lightning-input> 
+     <lightning-file-upload label="Upload Image" name="fileUploader" accept={acceptedFormat} record-id={locationId} onuploadfinished={handleFileUpload}></lightning-file-upload>
+</template>
