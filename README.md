@@ -90,9 +90,13 @@ force-app/
 
 1. Create or select a **Retail Store**
 2. Map **In-Store Locations**
-3. Upload **Planogram Image** (expected layout)
+3. Upload **Planogram Image**
 4. Sales rep visits store and uploads **actual shelf image**
-5. View and manage data via **Dashboard**
+5. Upload planogram image to the in-store locations via **Mobile-First Rep Dashboard**
+6. Agent validate the retail store and in-store location
+7. Analyzes shelf image and gives response.
+8. Create **Shelf Audit** record based on analysis
+9. Create **Visit & Assessment Task** related to the shelf audit
 
 ---
 
