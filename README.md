@@ -102,11 +102,16 @@ force-app/
 
 ## 🔐 Permissions
 
-Ensure users have access to:
+Ensure Einstein Agent user has access to:
 - Retail Store object
 - In-Store Location object
 - Files (ContentDocument)
 - Apex Classes & LWC Components
+- Shelf Audit object
+- Visit object
+- Assessment Task object
+- Shelf Action object
+- Shelf Number Audit object
 
 ---
 
